@@ -1,0 +1,6 @@
+.reveal pre.wide {
+  width: 100%;
+}
+body .reveal pre {
+  box-shadow: none;
+}

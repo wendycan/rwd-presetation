@@ -9,13 +9,14 @@
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-a  pp-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/main.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -46,15 +47,16 @@
 					<h1>响应式 Web 开发</h1>
 					<h3>设计和实现</h3>
 					<p>
-						<small>Created by <a href="ttp://wendycan.org"> Wendy Wang</a> / <a href="https://github.com/wendycan">@wendywang</a></small>
+						<small>by <a href="http://wendycan.org"> Wendy Wang</a></small>
 					</p>
 				</section>
 
 				<section>
 					<h2>目录</h2>
 					<ul>
-						<li>起源</li>
-						<li>实现原理</li>
+						<li>源起</li>
+						<li>设计理念</li>
+						<li>实现</li>
 						<li>Tips</li>
 						<li>框架分析</li>
 					</ul>
@@ -63,54 +65,122 @@
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>起源</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
+						<h2>源起</h2>
+						<ul>
+							<li>智能手机越来越重要</li>
+							<li>上网设备之间的尺寸差距与日俱增</li>
+						</ul>
+					</section>
+					<section>
+						<h3>智能手机越来越重要</h3>
+						<img src="imgs/statcounter-platform.jpg" alt="">
+						<small>gs.statcounter.com</small>
+					</section>
+					<section>
+						<h3>上网设备之间的尺寸差距与日俱增</h3>
+						<p>手机，平板，电脑。。。</p>
+					</section>
+					<section>
+						<h3>传统的解决方法</h3>
+						<ol>
+							<li>提供左右的滚动条</li>
+							<li>不断放大:seu.edu.cn</li>
+							<li>专门的手机网站:yhd.com</li>
+						</ol>
+					</section>
+					<section>
+						<h3>响应式网页设计</h3>
+						<p>RWD，Responsive Web Design，由伊桑·马科特(Ethan Marcotte)提出。他在 A List Apart 发表了一篇开创性的文章，将三种已有的开发技巧(弹性网格布局、弹性图片、媒体和媒体查询)整合起来，并命名为响应式网页设计。</p>
 					</section>
 				</section>
-
+				<section>
+					<h2>设计理念</h2>
+					<ul>
+						<li>网站不必在所有浏览器中表现一致</li>
+						<li>移动先行</li>
+					</ul>
+				</section>
 				<section>
 					<section>
-						<h2>实现原理</h2>
+						<h2>实现</h2>
+						<ul>
+							<li>viewport</li>
+							<li>media query</li>
+						</ul>
 						<p>
 						</p>
 					</section>
 					<section>
 						<h2>viewport</h2>
 						<p>
+							<pre class='wide'>
+								<code class='html'><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0"/></code>
+							</pre>
+							width指定虚拟窗口的屏幕宽度大小。<br>
+							height指定虚拟窗口的屏幕高度大小。<br>
+							initial-scale指定初始缩放比例。<br>
+							maximum-scale指定允许用户缩放的最大比例。<br>
+							minimum-scale指定允许用户缩放的最小比例。<br>
+							user-scalable指定是否允许手动缩放。<br>
 						</p>
 					</section>
 
 					<section>
 						<h2>media query</h2>
 						<p>
+							<pre>
+								<code class='css'>
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  body{
+    background: #ce33eb;
+  }
+}</code>
+							</pre>
 						</p>
-					</section>
-
-					<section>
-						<h2>resolution</h2>
-						<p></p>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Tips</h2>
 						<p>
+							<ul>
+								<li>限制最大宽度</li>
+								<li>百分比单位</li>
+								<li>弹性图片</li>
+							</ul>
 						</p>
 					</section>
 					<section>
-						<h2>宽度</h2>
+						<h3>限制最大宽度</h3>
+						<pre>
+							<code class='html'>
+&lt;div class="container">
+ &lt;h2>What will I learn?&lt;/h2>
+&lt;/div>
+							</code>
+						</pre>
+						<pre>
+							<code class='css'>
+.container {
+  margin: auto;
+  max-width: 800px;
+}
+							</code>
+						</pre>
 					</section>
 					<section>
-						<h2>浮动元素</h2>
+						<h3>百分比单位</h3>
+						<p>em 替换 px</p>
 					</section>
 					<section>
-						<h2>图片</h2>
-					</section>
-					<section>
-						<h2>表格</h2>
+						<h2>弹性图片</h2>
+						<pre>
+							<code class='css'>
+img {
+	max-width: 100%;
+}
+							</code>
+						</pre>
 					</section>
 				</section>
 <!-- 					<section data-background="#007777">
@@ -123,11 +193,11 @@
 						</a>
 					</section> -->
 				<section>
-					<section id="fragments">
+					<section>
 						<h2>框架分析</h2>
 						<ol>
-							<li class="fragment"><code>Foundation</code></li>
-							<li class="fragment"><em>Bootstrap</em></li>
+							<li><code>Foundation</code></li>
+							<li><code>Bootstrap</code></li>
 						</ol>
 					</section>
 				</section>
@@ -141,7 +211,7 @@
 
 				<section>
 					<h1>THE END</h1>
-					<h3>BY Wendy Wang</h3>
+					<p>BY Wendy Wang</p>
 				</section>
 
 			</div>
