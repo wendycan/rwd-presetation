@@ -4,3 +4,12 @@
 body .reveal pre {
   box-shadow: none;
 }
+.inline li {
+  display: inline-block;
+}
+.inline.two li {
+  width: 49%;
+}
+.inline.tow li img {
+  width: 100%;
+}
