@@ -49,6 +49,7 @@
 					<p>
 						<small>by <a href="http://wendycan.org"> Wendy Wang</a></small>
 					</p>
+					<p><small>Github Id: wendycan</small></p>
 				</section>
 
 				<section>
@@ -79,12 +80,12 @@
 					</section>
 					<section>
 						<h3>上网设备之间的尺寸差距与日俱增</h3>
-						<p>手机，平板，电脑。。。</p>
+						<p>手机，平板，电脑……</p>
 					</section>
 					<section>
 						<h3>传统的解决方法</h3>
 						<ol>
-							<li>滚动条不断放大: <a href="http://seu.edu.cn" title="">东南大学</a></li>
+							<li>拖动，放大: <a href="http://seu.edu.cn" title="">东南大学</a></li>
 							<li>独立的手机站点: <a href="http://m.yhd.com" title="">一号店</a></li>
 						</ol>
 					</section>
@@ -114,7 +115,7 @@
 						<h2>viewport</h2>
 						<p>
 							<pre class='wide'>
-								<code class='html'><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></code>
+								<code class='html'><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"></code>
 							</pre>
 							width指定虚拟窗口的屏幕宽度大小。<br>
 							initial-scale指定初始缩放比例。<br>
@@ -125,7 +126,7 @@
 					<section>
 						<h2>media query</h2>
 						<p>
-							<pre>
+							<pre class='no-margin'>
 								<code class='css'>
 @media screen and (min-width: 480px) and (max-width: 767px) {
   body{
@@ -134,6 +135,8 @@
 }</code>
 							</pre>
 						</p>
+						<p class='left'><small>逻辑操作符： and, not, only...</small></p>
+						<p class='left'><small>检测特性： width, height, device-width, device-height, orientation, aspect-ratio, color, color-index,  monochrome, resolution...</small></p>
 					</section>
 				</section>
 				<section>
@@ -144,6 +147,7 @@
 								<li>限制最大宽度</li>
 								<li>百分比单位</li>
 								<li>弹性图片</li>
+								<li>导航栏</li>
 							</ul>
 						</p>
 					</section>
@@ -189,6 +193,13 @@ img {
 							</code>
 						</pre>
 					</section>
+					<section>
+						<h3>导航栏</h3>
+						<video controls>
+							<source src="imgs/nav.mp4" >
+							</object>
+						</video>
+					</section>
 				</section>
 				<section>
 					<section>
@@ -201,7 +212,7 @@ img {
 					<section>
 						<h3>Foundation Media Query</h3>
 						<video controls>
-							<source src="imgs/basic_foundation.mp4" type="" media="video/mp4">
+							<source src="imgs/basic_foundation.mp4" >
 						</video>
 						<p>两个断点: 40.063em 和 64.063em </p>
 					</section>
@@ -214,17 +225,50 @@ img {
 					</section>
 					<section>
 						<h3>Foundation Visibility Class</h3>
-						<img src="imgs/visiual.png" alt="">
+						<ul class='inline two h-200'>
+							<li><img src="imgs/visiual-html.png" alt=""></li>
+							<li><img src="imgs/visiual.png" alt=""></li>
+						</ul>
 					</section>
 				</section>
 				<section>
-					<h2>工具</h2>
-					<ul>
-						<li>Modernizr</li>
-						<li><a href="http://www.responsinator.com" title="">responsinator</a></li>
-					</ul>
-				</section>
+					<section>
+						<h2>工具</h2>
+						<ul>
+							<li><a href="http://modernizr.com/" title="">Modernizr</a></li>
+							<li><a href="http://www.responsinator.com" title="">Responsinator</a>, <a href="http://beta.screenqueri.es/" title="">screenqueri</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Modernizr</h3>
+						<img src="imgs/modernizr.png" alt="">
+					</section>
+					<section>
+						<h3>Modernizr 修复样式</h3>
+						<pre>
+							<code class='css'>
+.note {
+  display: none;
+}
+.no-canvas .note {
+  display: block;
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h3>Modernizr 按需加载</h3>
+						<pre>
+							<code class='js'>
+Modernizr.load({
+  test: Modernizr.mq('only all'),
+  nope: 'js/respond.min.js'
+})
+							</code>
+						</pre>
+					</section>
 
+				</section>
 				<section>
 					<h2>参考</h2>
 					<ul>
@@ -236,6 +280,7 @@ img {
 				<section>
 					<h1>THE END</h1>
 					<p>BY Wendy Wang</p>
+					<p><small>Github: @wendycan</small></p>
 				</section>
 
 			</div>

@@ -1,15 +1,35 @@
 .reveal pre.wide {
   width: 100%;
 }
+
 body .reveal pre {
   box-shadow: none;
 }
+
 .inline li {
   display: inline-block;
 }
 .inline.two li {
   width: 49%;
 }
-.inline.tow li img {
+
+.inline.two li img {
   width: 100%;
+}
+
+.inline.two.h-200 li img {
+  height: 200px;
+}
+
+body p.left{
+  text-align: left;
+}
+
+pre.no-margin {
+  margin: 0;
+}
+
+h2 {
+  border-bottom: solid 1px white !important;
+  padding-bottom: 10px !important;
 }
